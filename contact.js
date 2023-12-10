@@ -11,7 +11,7 @@ export const ListContacts = async () => {
 export const getContactById = async (id) => {
   const allContacts = await ListContacts();
   const [contact] = allContacts.filter((item) => item.id === id);
-  if (contact.length !== 0) {
+  if (contact) {
     return contact;
   } else {
     return null;
